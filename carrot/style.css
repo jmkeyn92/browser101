@@ -1,3 +1,16 @@
-.body {
+body {
   background-color: black;
+  /* display: flex; */
+  text-align: center;
+
+}
+
+section {
+  width: 1000;
+  height: 800;
+  background-color: white;
+  display: block;
+  margin: auto;
+  
+  
 }
