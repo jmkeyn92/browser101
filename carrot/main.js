@@ -12,6 +12,7 @@ let stopWatch = setInterval(() => {
   second--;
   if(second == -1) {
     clearInterval(stopWatch);
+    alert('You lose!!');
   } else {
     styleChange();
   }  
@@ -57,10 +58,32 @@ function createItem(left, top, item) {
 randScatter();
 
 const carrots = document.querySelectorAll('.carrot-icon')
-console.log(carrots);
+console.log(carrots.length);
+
+let countNumber = 0
 carrots.forEach((item) => {
   item.addEventListener('click', (event) => {
     console.log(counter);
     event.target.remove();
+    countNumber++;
+    counterChange();
+    if(countNumber == 10) {
+      alert('You win!!!')
+      clearInterval(stopWatch);
+    }
+
   })
 });
+
+function counterChange() {
+  counter.innerHTML = countNumber;
+}
+
+const bugs = document.querySelectorAll('.bug-icon')
+console.log(bugs);
+bugs.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    alert('You lose!!')
+  })
+});
+
