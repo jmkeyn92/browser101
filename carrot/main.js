@@ -6,13 +6,13 @@ const field = document.querySelector('.field');
 const carrot = document.querySelector('.carrot-icon');
 const bug = document.querySelector('.bug-icon');
 
-let second = 10;
+let second = 15;
 
 let stopWatch = setInterval(() => {
   second--;
   if(second == -1) {
     clearInterval(stopWatch);
-    alert('You lose!!');
+    alert('우~~~~~~~~~~~~~~');
   } else {
     styleChange();
   }  
@@ -31,14 +31,14 @@ const fieldRect = field.getBoundingClientRect();
 function randScatter() {
   let n = 10;
   for(let i=0; i<n; i++) {
-    let left = (fieldRect.right-fieldRect.left)*Math.random();
-    let top = (fieldRect.bottom-fieldRect.top)*Math.random();
+    let left = (fieldRect.right-80-fieldRect.left)*Math.random(); // 당근 사이즈 80
+    let top = (fieldRect.bottom-80-fieldRect.top)*Math.random();
     // console.log(left, top);
     createItem(left, top, carrot);
   }
   for(let i=0; i<n; i++) {
-    let left = (fieldRect.right-fieldRect.left)*Math.random();
-    let top = (fieldRect.bottom-fieldRect.top)*Math.random();
+    let left = (fieldRect.right-80-fieldRect.left)*Math.random(); // 벌레 사이즈 80
+    let top = (fieldRect.bottom-80-fieldRect.top)*Math.random();
     // console.log(left, top);
     createItem(left, top, bug);
   }
@@ -68,7 +68,7 @@ carrots.forEach((item) => {
     countNumber++;
     counterChange();
     if(countNumber == 10) {
-      alert('You win!!!')
+      alert('김가람님의 승리를 축하합니다!!')
       clearInterval(stopWatch);
     }
 
@@ -83,7 +83,7 @@ const bugs = document.querySelectorAll('.bug-icon')
 console.log(bugs);
 bugs.forEach((item) => {
   item.addEventListener('click', (event) => {
-    alert('You lose!!')
+    alert('yeah it\'s so bad')
   })
 });
 
