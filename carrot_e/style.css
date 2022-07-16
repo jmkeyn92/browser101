@@ -17,8 +17,8 @@ button {
   flex-direction: column;
   position: relative;
   border-radius: 20px;
-  width: 800px;
-  height: 500px;
+  width: 1000px;
+  height: 800px;
   margin: auto;
   margin-top: 50px;
   background: url(img/background.png) center/cover no-repeat;
@@ -70,7 +70,7 @@ header {
   position: relative;
   width: 100%;
   height: 100%;
-  margin-top: 40px;
+  margin-top: 240px;
 }
 
 .pop-up {
@@ -80,7 +80,7 @@ header {
   margin: auto;
   background-color: #00000090;
   color: white;
-  transform: translateY(-150%);
+  transform: translateY(-350%);
 }
 
 .pop-up--hide {
