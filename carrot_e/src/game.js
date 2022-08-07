@@ -49,7 +49,6 @@ export default class Game {
     this.started = false;
     this.stopGameTimer();
     this.hideGameButton();
-    // this.gameFinishBanner.showWithText('REPLAY❓');
     sound.playAlert();
     sound.stopBackground();
     this.onGameStop && this.onGameStop('cancel');
@@ -65,7 +64,6 @@ export default class Game {
     }
     this.stopGameTimer();
     sound.stopBackground();
-    // this.gameFinishBanner.showWithText(win ? 'YOU WON 🎉' : 'YOU LOST 💩');
     this.onGameStop && this.onGameStop(win ? 'win' : 'lose');
   }
 
