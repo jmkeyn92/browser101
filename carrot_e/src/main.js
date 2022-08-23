@@ -5,9 +5,9 @@ import PopUp from './popup.js';
 // import * as sound from './sound.js';
 import Game from './game.js';
 
-const GAME_DURATION_SEC = 60;
+const GAME_DURATION_SEC = 20;
 const CARROT_COUNT = 10;
-const BUG_COUNT = 30;
+const BUG_COUNT = 1;
 
 const gameFinishBanner = new PopUp();
 const game = new Game(GAME_DURATION_SEC, CARROT_COUNT, BUG_COUNT);
